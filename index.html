@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="gameElements">
+        <p id="guessed"></p>
+        <button id="startBtn" onclick="start();"> START </button>
+        <div id="letters">
+            <button class="letterBtn">A</button>
+            <button class="letterBtn">B</button>
+            <button class="letterBtn">C</button>
+            <button class="letterBtn">D</button>
+            <button class="letterBtn">E</button>
+            <button class="letterBtn">F</button>
+            <button class="letterBtn">G</button>
+            <button class="letterBtn">H</button>
+            <button class="letterBtn">I</button>
+            <button class="letterBtn">J</button>
+            <button class="letterBtn">K</button>
+            <button class="letterBtn">L</button>
+            <button class="letterBtn">M</button>
+            <button class="letterBtn">N</button>
+            <button class="letterBtn">O</button>
+            <button class="letterBtn">P</button>
+            <button class="letterBtn">Q</button>
+            <button class="letterBtn">R</button>
+            <button class="letterBtn">S</button>
+            <button class="letterBtn">T</button>
+            <button class="letterBtn">U</button>
+            <button class="letterBtn">V</button>
+            <button class="letterBtn">W</button>
+            <button class="letterBtn">X</button>
+            <button class="letterBtn">Y</button>
+            <button class="letterBtn">Z</button>
+        </div>
+        <h2 id="message"></h2>
+        <h2 id="realword"></h2>
+        <button id="restart">New Game</button>
+    </div>
+    <script>
+        var letterButtons = document.getElementsByClassName("letterBtn");
+        for (var i = 0; i < 26; i++) {
+            letterButtons[i].style.display = "none";
+            letterButtons[i].addEventListener("click", checking);
+            document.getElementById("restart").style.display = "none";
+        }
+    </script>
+</body>
+</html>

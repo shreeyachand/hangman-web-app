@@ -45,11 +45,17 @@
         <button id="restart">New Game</button>
     </div>
     <script>
+
         var letterButtons = document.getElementsByClassName("letterBtn");
+        var restartButton = document.getElementById("restart");
+        restartButton.style.display = "none";
+        restartButton.addEventListener("click", newgame);
         for (var i = 0; i < 26; i++) {
             letterButtons[i].style.display = "none";
             letterButtons[i].addEventListener("click", checking);
-            document.getElementById("restart").style.display = "none";
+        }
+        function newgame() {
+            location.reload();
         }
     </script>
 </body>
